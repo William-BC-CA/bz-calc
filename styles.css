@@ -27,7 +27,7 @@
 @media (min-width: 768px) {
     .configurations{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 20px;
         align-items: center;
         max-width: 60%;
@@ -35,5 +35,6 @@
 
     .config-item {
         margin-right: 10px;
+        margin-left: 10px;
     }
 }
