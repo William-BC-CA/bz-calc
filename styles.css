@@ -13,14 +13,27 @@
 }
 
 .configurations{
-    display: flex;
-    justify-content: space-between;
     margin: auto;
-    margin-bottom: 20px;
-    align-items: center;
-    max-width: 60%;
 }
 
 .config-item {
-    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.button-controls button{
+    margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .configurations{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        align-items: center;
+        max-width: 60%;
+    }
+
+    .config-item {
+        margin-right: 10px;
+    }
 }

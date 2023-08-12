@@ -22,7 +22,7 @@
         </header>
         <main class = "container">
             <p><i>Welcome to the Ban Zai Sushi Calculator!<br>This is used to calculate the total of sushi!<br>12% tax is <u>included</u>.<br>Rounded into hundredths decimal place!<br>This may get updates from time to time!</i></p>
-            <h2>Preset Configurations</h2>
+            <h2>Preset Configs</h2>
             <div class = "configurations">
                 <div class = "config-item"><button onclick = "config1()">Config 1</button></div>
                 <div class = "config-item"><button onclick = "config2()">Config 2</button></div>
@@ -34,8 +34,10 @@
             <input type = "text" id = "houseRoll" name = "name2" required minlength = "4" maxlength = "8" size = "10" />
             <br>
             <br>
-            <button onclick = "toCalculate()">Calculate</button>
-            <button onclick = "clearStuff()">Clear</button>
+            <div class = "button-controls">
+                <button onclick = "toCalculate()">Calculate</button>
+                <button onclick = "clearStuff()">Clear</button>
+            </div>
 
             <p id = "result"> </p>
         </main>
