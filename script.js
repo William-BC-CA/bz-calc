@@ -5,6 +5,7 @@ const sashimi = 17.55; // 9 pcs.
 const sashimiSmall = 10.50; // 5 pcs.
 
 var bal = 0;
+var res = document.getElementById("result");
 
 function roundDecimalPlaces(){
     bal = Math.round((bal + Number.EPSILON) * 100) / 100;
@@ -36,15 +37,56 @@ function looper(option, maxVal){
 function toCalculate(){
     bal = 0;
     let countSashimi = parseInt(document.getElementById("sashimi").value);
-    console.log(countSashimi);
     let countHouseRoll = parseInt(document.getElementById("houseRoll").value);
     looper(2, countSashimi);
-    console.log(bal);
     looper(0, countHouseRoll);
     withTax();
     roundDecimalPlaces();
-    let res = document.getElementById("result");
+    if (bal == 0){
+        res.innerHTML = "<i>Please set an amount before calculating!</i>";
+        return;
+    }
     res.innerHTML = "<b>Your total is: $" + bal + "</b>";
+}
+
+function config1(){
+    let countSashimi = 3;
+    let countHouseRoll = 2;
+    let sashimiSelector = document.getElementById("sashimi");
+    let houseRollSelector = document.getElementById("houseRoll");
+    sashimiSelector.value = countSashimi;
+    houseRollSelector.value = countHouseRoll;
+}
+
+function config2(){
+    // let countSashimi = ;
+    // let countHouseRoll = ;
+    // let sashimiSelector = document.getElementById("sashimi");
+    // let houseRollSelector = document.getElementById("houseRoll");
+    // sashimiSelector.value = countSashimi;
+    // houseRollSelector.value = countHouseRoll;
+
+    // Not yet implemented
+    res.innerHTML = "<i>Not Available!</i>";
+}
+
+function config3(){
+    // let countSashimi = ;
+    // let countHouseRoll = ;
+    // let sashimiSelector = document.getElementById("sashimi");
+    // let houseRollSelector = document.getElementById("houseRoll");
+    // sashimiSelector.value = countSashimi;
+    // houseRollSelector.value = countHouseRoll;
+
+    // Not yet implemented
+    res.innerHTML = "<i>Not Available!</i>";
+}
+
+function clearStuff(){
+    let sashimiSelector = document.getElementById("sashimi");
+    let houseRollSelector = document.getElementById("houseRoll");
+    sashimiSelector.value = null;
+    houseRollSelector.value = null;
 }
 
 function tester(){
@@ -55,4 +97,3 @@ function tester(){
 }
 
 // tester();
-console.log(bal);

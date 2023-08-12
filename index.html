@@ -12,7 +12,7 @@
     <meta content="#ff0000" data-react-helmet="true" name="theme-color" />
     <!-- <meta content="https://drive.google.com/uc?export=download&id=1ua5gBvAvktz1bfaCMiGzpPg6k85t8zyO" property="og:image" /> -->
     <!-- <link rel="icon" href="../images/sts-icon.png"> -->
-    <script src = "script.js"></script>
+    <script src = "script.js" defer></script>
 </head>
 <body>
     <div class = "wrapper">
@@ -21,6 +21,12 @@
             <h1>BZ Calculator</h1>
         </header>
         <main class = "container">
+            <h2>Preset Configurations</h2>
+            <div class = "configurations">
+                <div class = "config-item"><button onclick = "config1()">Config 1</button></div>
+                <div class = "config-item"><button onclick = "config2()">Config 2</button></div>
+                <div class = "config-item"><button onclick = "config3()">Config 3</button></div>
+            </div>
             <h3>Sashimi Amount:</h3>
             <input type="text" id="sashimi" name="name" required minlength="4" maxlength="8" size="10" />
             <h3>House Roll Amount:</h3>
@@ -28,8 +34,9 @@
             <br>
             <br>
             <button onclick = "toCalculate()">Calculate</button>
+            <button onclick = "clearStuff()">Clear</button>
 
-            <p id = "result"></p>
+            <p id = "result"> </p>
         </main>
         <footer>
             <br>

@@ -11,3 +11,16 @@
     padding: 20px;
     box-shadow: 5px 5px 5px black;
 }
+
+.configurations{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 20px;
+    align-items: center;
+    max-width: 60%;
+}
+
+.config-item {
+    margin-right: 10px;
+}
