@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BZ Calculator</title>
+    <meta content="BZ Calculator" property="og:title" />
+    <meta content="BZ Calculator." property="og:description" />
+    <meta content="https://www.bzcalc.williamchan.dev" property="og:url" />
+    <meta content="#ff0000" data-react-helmet="true" name="theme-color" />
+    <!-- <meta content="https://drive.google.com/uc?export=download&id=1ua5gBvAvktz1bfaCMiGzpPg6k85t8zyO" property="og:image" /> -->
+    <!-- <link rel="icon" href="../images/sts-icon.png"> -->
+    <script src = "script.js"></script>
+</head>
+<body>
+    <div class = "wrapper">
+        <header>
+            <!-- <h1><a href = "../WIP/">Super Tech Security</a></h1> -->
+            <h1>BZ Calculator</h1>
+        </header>
+        <main class = "container">
+            <h3>Sashimi Amount:</h3>
+            <input type="text" id="sashimi" name="name" required minlength="4" maxlength="8" size="10" />
+            <h3>House Roll Amount:</h3>
+            <input type = "text" id = "houseRoll" name = "name2" required minlength = "4" maxlength = "8" size = "10" />
+            <br>
+            <br>
+            <button onclick = "toCalculate()">Calculate</button>
+
+            <p id = "result"></p>
+        </main>
+        <footer>
+            <br>
+            <p><i>Last Updated: August 12, 2023</i></p>
+            <!-- <h1>Copyright &copy; 2023 NOTORIEX LEGACY. All rights reserved.</h1> -->
+        </footer>
+</body>
+</html>
