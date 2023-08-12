@@ -87,6 +87,7 @@ function clearStuff(){
     let houseRollSelector = document.getElementById("houseRoll");
     sashimiSelector.value = null;
     houseRollSelector.value = null;
+    res.innerHTML = "";
 }
 
 function tester(){
