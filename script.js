@@ -1,4 +1,4 @@
-// BanZai Menu
+// Menu
 const houseRoll = 15.95; // Regular
 const houseRollSmall = 8.95; // Small
 const sashimi = 17.55; // 9 pcs.
