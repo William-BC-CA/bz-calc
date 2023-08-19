@@ -21,7 +21,7 @@
             <h1>BZ Calculator</h1>
         </header>
         <main class = "container">
-            <p><i>Welcome to the Ban Zai Sushi Calculator!<br>This is used to calculate the total of sushi!<br><b>12%</b> tax is <u>included</u>.<br>Rounded into hundredths decimal place!<br>This may get updates from time to time!<br>Discounts are not supported!</i></p>
+            <p><i>Welcome to the Ban Zai Sushi Calculator!<br>This is used to calculate the total of sushi!<br><u>New tax options are provided below!</u><br>Rounded into hundredths decimal place!<br>This may get updates from time to time!<br>Discounts are not supported!</i></p>
             <h2>Preset Configs</h2>
             <div class = "configurations">
                 <div class = "config-item"><button onclick = "config1()">Config 1</button></div>
@@ -34,8 +34,11 @@
             <input type = "text" id = "houseRoll" name = "name2" required minlength = "4" maxlength = "8" size = "10" />
             <br>
             <br>
-            <label for = "chkbox">Include Tax:</label>
-            <input type = "checkbox" id = "chkbox" name = "chkbox" value = "true">
+            <label for = "twelveTax">12% Tax:</label><input type = "radio" id = "twelveTax" name = "taxRadio" value = "twelveTax" required>
+            <br>
+            <label for = "fiveTax">5% Tax:</label><input type = "radio" id = "fiveTax" name = "taxRadio" value = "fiveTax">
+            <br>
+            <label for = "noTax">No Tax:</label><input type = "radio" id = "noTax" name = "taxRadio" value = "none">
             <br>
             <br>
             <div class = "button-controls">
