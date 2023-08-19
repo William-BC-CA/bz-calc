@@ -14,6 +14,10 @@ var twelveTax = document.getElementById("twelveTax");
 var fiveTax = document.getElementById("fiveTax");
 var noneTax = document.getElementById("noTax");
 const radioButtons = document.getElementsByName('taxRadio');
+const radioButtons2 = document.getElementsByName('discounts');
+var tenOff = document.getElementById("tenpercentoff");
+var twoOff = document.getElementById("twopercentoff");
+var noneOff = document.getElementById("noDiscounts");
 
 function roundDecimalPlaces(){
     bal = Math.round((bal + Number.EPSILON) * 100) / 100;
@@ -26,6 +30,17 @@ function withTax(){
     else if (fiveTax.checked){
         let tmp = bal * 0.05;
         bal += tmp;
+    }
+}
+
+function addDiscounts(){
+    if (tenOff.checked){
+        let tmp = bal * 0.1;
+        bal -= tmp;
+    }
+    else if (twoOff.checked){
+        let tmp = bal * 0.02;
+        bal -= tmp;
     }
 }
 
@@ -49,6 +64,7 @@ function balAdder(option, maxVal){
 // From ChatGPT
 function validateForm() {
     let isValid = false;
+    let isValid2 = false;
 
     for (let i = 0; i < radioButtons.length; i++) {
         if (radioButtons[i].checked) {
@@ -57,12 +73,24 @@ function validateForm() {
         }
     }
 
-    if (isValid) {
+    for (let i = 0; i < radioButtons2.length; i++) {
+        if (radioButtons2[i].checked) {
+            isValid2 = true;
+            break;
+        }
+    }
+
+    if (isValid && isValid2) {
         // Form is valid, proceed with further actions
         withTax();
+        addDiscounts();
         roundDecimalPlaces();
         res.innerHTML = "<b>Your total is: $" + bal + "</b>";
         // Add your code for form submission or further processing here
+    }
+    else if (isValid && !isValid2){
+        // Form is not valid, display an error message
+        res.innerHTML = "<i>Please select a discount option!</i>";
     }
     else {
         // Form is not valid, display an error message
@@ -86,6 +114,8 @@ function config1(){
     sashimiSelector.value = 3;
     houseRollSelector.value = 2;
     twelveTax.checked = true;
+
+    twoOff.checked = true;
 }
 
 function config2(){
@@ -99,6 +129,8 @@ function config2(){
     sashimiSelector.value = 4;
     houseRollSelector.value = 3;
     twelveTax.checked = true;
+
+    twoOff.checked = true;
 
     // Not yet implemented
     // res.innerHTML = "<i>Not Available!</i>";
@@ -116,6 +148,8 @@ function config3(){
     houseRollSelector.value = 2.5;
     twelveTax.checked = true;
 
+    twoOff.checked = true;
+
     // Not yet implemented
     // res.innerHTML = "<i>Not Available!</i>";
 }
@@ -129,6 +163,10 @@ function clearStuff(){
     fiveTax.checked = false;
     noneTax.checked = false;
     res.innerHTML = "";
+
+    tenOff.checked = false;
+    twoOff.checked = false;
+    noneOff.checked = false;
 }
 
 function tester(){
