@@ -113,7 +113,7 @@ function config1(){
     res.innerHTML = "";
     sashimiSelector.value = 3;
     houseRollSelector.value = 2;
-    twelveTax.checked = true;
+    fiveTax.checked = true;
 
     twoOff.checked = true;
 }
@@ -128,7 +128,7 @@ function config2(){
     // houseRollSelector.value = countHouseRoll;
     sashimiSelector.value = 4;
     houseRollSelector.value = 3;
-    twelveTax.checked = true;
+    fiveTax.checked = true;
 
     twoOff.checked = true;
 
@@ -146,7 +146,7 @@ function config3(){
     // houseRollSelector.value = countHouseRoll;
     sashimiSelector.value = 4;
     houseRollSelector.value = 2.5;
-    twelveTax.checked = true;
+    fiveTax.checked = true;
 
     twoOff.checked = true;
 
